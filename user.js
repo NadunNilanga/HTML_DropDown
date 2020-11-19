@@ -6,9 +6,8 @@ function load_combo_box_user(callBack) {
         } else {
             $.each(e, function(index, qData) {
                 index++;
-                combo_data += combo_data += '<option value="' + qData.name + '">' + qData.nic + '</option>';
+                $(".user-list").append('<option value="' + qData.name + '">' + qData.nic + '</option>');
             });
-            $('.user-list').html(combo_data);
             $('.user-list').select2();
         }
 
